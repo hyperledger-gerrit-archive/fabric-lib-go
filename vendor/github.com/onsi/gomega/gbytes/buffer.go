@@ -37,6 +37,7 @@ type Buffer struct {
 NewBuffer returns a new gbytes.Buffer
 */
 func NewBuffer() *Buffer {
+        fmt.Println("TESTING")
 	return &Buffer{
 		lock: &sync.Mutex{},
 	}
