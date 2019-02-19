@@ -11,6 +11,7 @@
 
 .PHONY: all checks
 
+BASE_VERSION = 0.1.1
 all: checks unit-tests
 
 checks: license vet fmtcheck
@@ -34,3 +35,6 @@ unit-tests:
 vet:
 	@echo "Running go vet..."
 	@scripts/run-go-vet.sh
+
+build-gotools:
+	docker build -t hyperledger/fabric-gotools:$(BASE_VERSION) images/gotools
