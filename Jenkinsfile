@@ -9,7 +9,7 @@ node ('hyp-x') { // trigger build on x86_64 node
   try {
     def ROOTDIR = pwd() // workspace dir (/w/workspace/<job_name>)
     def PROJECT_DIR = "${BASE_DIR}"
-    def ARCH="$(uname -m | sed 's/x86_64/amd64/g')"
+    def ARCH = sh(script: "uname -m | sed 's/x86_64/amd64/g'", returnStdout: true)
     stage("Clenaup Environment") {
       wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
         fabBuildLibrary.cleanupEnv() // Cleanup the leftover build artifacts
@@ -20,7 +20,7 @@ node ('hyp-x') { // trigger build on x86_64 node
       // Delete working directory
       deleteDir()
       // Clone the repository
-      fabBuildLibrary.cloneRepo 'fabric-lib-go'
+      fabBuildLibrary.cloneRefSpec 'fabric-lib-go'
     }
     // load the properties file
     props = fabBuildLibrary.loadProperties()
