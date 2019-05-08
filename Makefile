@@ -13,7 +13,7 @@
 
 all: checks unit-tests
 
-checks: license vet fmtcheck
+checks: license vet gotools fmtcheck
 
 .PHONY: fmtcheck
 fmtcheck:
@@ -34,3 +34,7 @@ unit-tests:
 vet:
 	@echo "Running go vet..."
 	@scripts/run-go-vet.sh
+
+.PHONY: gotools
+gotools:
+	@go get golang.org/x/tools/cmd/goimports

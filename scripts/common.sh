@@ -37,4 +37,3 @@ git_last_changed() {
 git_last_changed_excluding() {
     git_last_changed | grep -Ev $(join_by '|' $*) || true
 }
-
