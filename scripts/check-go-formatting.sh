@@ -9,6 +9,8 @@ source "${scripts_dir}/common.sh"
 
 read -r -a source_dirs <<< $(go list -f '{{.Dir}}' ./...)
 
+echo "which gofmt"
+echo "ls $GOROOT/bin"
 unformatted=$(gofmt -l -s "${source_dirs[@]}")
 if [ -n "${unformatted}" ]; then
     echo "The following files contain gofmt errors"
@@ -17,7 +19,7 @@ if [ -n "${unformatted}" ]; then
     exit 1
 fi
 
-import_errors=$(command_exists "goimports" && goimports -l "${source_dirs[@]}")
+import_errors=$(goimports -l "${source_dirs[@]}")
 if [ -n "${import_errors}" ]; then
     echo "The following files contain goimports errors"
     echo -e "\t${import_errors}"
