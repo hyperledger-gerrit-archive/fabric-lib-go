@@ -18,10 +18,6 @@ filter_generated_files() {
     done
 }
 
-command_exists() {
-    [ -x $(command -v $1) 2>&1 ]
-}
-
 git_diff() {
     git diff --name-only --diff-filter ACMRTUXB ${1:-HEAD}
 }
@@ -37,4 +33,3 @@ git_last_changed() {
 git_last_changed_excluding() {
     git_last_changed | grep -Ev $(join_by '|' $*) || true
 }
-
