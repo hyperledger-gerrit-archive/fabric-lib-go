@@ -1,0 +1,8 @@
+Verified+1: Hyperledger Jobbuilder <jobbuilder@jenkins.hyperledger.org>
+Code-Review+1: Tim Johnson <tijohnson@linuxfoundation.org>
+Code-Review+2: Matthew Sykes <sykesmat@us.ibm.com>
+Submitted-by: Matthew Sykes <sykesmat@us.ibm.com>
+Submitted-at: Mon, 20 May 2019 17:23:41 +0000
+Reviewed-on: https://gerrit.hyperledger.org/r/c/fabric-lib-go/+/31290
+Project: fabric-lib-go
+Branch: refs/heads/master
