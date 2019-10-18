@@ -10,11 +10,12 @@ source "$(dirname $0)/common.sh"
 
 license_excluded_file_patterns=(
     ".git$"
-    "(^|/)vendor/"
     "\.txt$"
     "\.md$"
     "\.rst$"
     "^Gopkg.lock$"
+    "^go.mod$"
+    "^go.sum$"
 )
 
 candidates=$(git_last_changed_excluding "${license_excluded_file_patterns[@]}")
