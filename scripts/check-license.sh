@@ -15,6 +15,8 @@ license_excluded_file_patterns=(
     "\.md$"
     "\.rst$"
     "^Gopkg.lock$"
+    "mod$"
+    "sum$"
 )
 
 candidates=$(git_last_changed_excluding "${license_excluded_file_patterns[@]}")
