@@ -9,6 +9,7 @@
 source "$(dirname $0)/common.sh"
 
 license_excluded_file_patterns=(
+    "^\.$"
     ".git$"
     "(^|/)vendor/"
     "\.txt$"
