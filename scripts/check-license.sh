@@ -6,6 +6,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+set -x
+
 source "$(dirname $0)/common.sh"
 
 license_excluded_file_patterns=(
