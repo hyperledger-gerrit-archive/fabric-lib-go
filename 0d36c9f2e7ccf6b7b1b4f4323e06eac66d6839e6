@@ -1,0 +1,7 @@
+Verified+1: Hyperledger Jobbuilder <jobbuilder@jenkins.hyperledger.org>
+Code-Review+2: David Enyeart <enyeart@us.ibm.com>
+Submitted-by: David Enyeart <enyeart@us.ibm.com>
+Submitted-at: Wed, 20 Nov 2019 17:29:18 +0000
+Reviewed-on: https://gerrit.hyperledger.org/r/c/fabric-lib-go/+/34356
+Project: fabric-lib-go
+Branch: refs/heads/master
